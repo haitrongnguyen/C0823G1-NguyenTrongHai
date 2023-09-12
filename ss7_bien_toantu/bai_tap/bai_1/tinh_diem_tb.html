@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập điểm vật lí </p>
+<input type="number" id="vatli" />
+<p>Nhập điểm hóa học </p>
+<input type="number" id="hoahoc"/>
+<p>Nhập điểm sinh học </p>
+<input type="number" id="sinhhoc">
+<button onclick="tb()">Kết quả</button>
+<p>Điểm trung bình là:</p>
+<p id="kq"></p>
+<p>Tổng điểm là: </p>
+<p id="tong"></p>
+
+<script>
+    function tb() {
+        a = +document.getElementById("vatli").value;
+        b = +document.getElementById("hoahoc").value;
+        c = +document.getElementById("sinhhoc").value;
+        document.getElementById("kq").innerText = (a + b + c)/3;
+        document.getElementById("tong").innerText = (a + b + c)
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>Nhập bán kính:</h4>
+<input type="number" id="bk">
+<button onclick="tinh()">Tính</button>
+<h4>Chu vi hình tròn là:</h4>
+<p id="dt">
+</p>
+<script>
+    function tinh(){
+        let r = document.getElementById("bk").value;
+        const PI = 3.14;
+        document.getElementById("dt").innerText = r*2*PI;
+    }
+
+</script>
+
+
+</body>
+</html>

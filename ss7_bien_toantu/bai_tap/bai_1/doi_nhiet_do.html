@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>Nhập độ C</h4>
+<input type="number" id="doc" placeholder="Độ c(Celsius">
+<button onclick="doi()">Nhập</button>
+<h4>Độ F:</h4>
+<p id="dof"></p>
+<script>
+    function doi(){
+        let a = +document.getElementById("doc").value;
+        document.getElementById("dof").innerText = a*1.8+32;
+    }
+</script>
+
+</body>
+</html>

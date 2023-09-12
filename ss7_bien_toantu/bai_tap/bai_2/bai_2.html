@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><input type="number" id="tien"></td>
+        <td>
+            <select id="vnd">
+                <option>VND</option>
+                <option>USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="my">
+                <option>VND</option>
+                <option>USD</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="doi()">Convert</button>
+        </td>
+    </tr>
+</table>
+<p id="dadoi"></p>
+<script>
+    function doi(){
+        t = document.getElementById("tien").value;
+        v = document.getElementById("vnd").value;
+        m = document.getElementById("my").value;
+        let result;
+
+        if (v=="VND" && m=="USD") {
+            result ="Result = " + (t/23000) + "Đ";
+        }
+        else if(v=="USD" && m=="VND") {
+            result ="Result = " + (t*23000) + "$";
+        }
+        if (v=="VND" && m=="VND"){
+            result ="Result = " + t + "Đ";
+        }
+        else if(v=="USD" && m=="USD") {
+            result = "Result = "+ t + "$"
+        }
+        document.getElementById("dadoi").innerHTML = result;
+    }
+</script>
+
+</body>
+</html>
