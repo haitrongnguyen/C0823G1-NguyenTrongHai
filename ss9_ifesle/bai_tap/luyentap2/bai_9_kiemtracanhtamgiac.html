@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra cạnh tam giác</title>
+</head>
+<body>
+<script>
+    let a= +prompt("nhập cạnh thứ nhất")
+    let b= +prompt("nhập cạnh thứ hai")
+    let c= +prompt("nhập cạnh thứ ba")
+    if (a>0 && b>0 && c>0) {
+        if (a+b>c) {
+            if(b+c>a) {
+                if (a+c>b) {
+                    document.write("Đây là ba cạnh của một tam giác");
+                }else {
+                    document.write("Đây không phải là ba cạnh của một tam giác");
+                }
+            }else {
+                document.write("Đây không phải là ba cạnh của một tam giác");
+            }
+        }else {
+            document.write("Đây không phải là ba cạnh của một tam giác");
+        }
+    }else {
+        document.write("Đây không phải là ba cạnh của một tam giác");
+    }
+
+</script>
+</body>
+</html>

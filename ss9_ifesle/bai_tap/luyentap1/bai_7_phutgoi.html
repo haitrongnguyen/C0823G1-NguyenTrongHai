@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số phút gọi</title>
+</head>
+<body>
+<h4>Số tiền phải trả là: </h4>
+<h5 id="tien"></h5>
+<script>
+    let a=prompt("Nhập vào số phút gọi");
+    if (a>200) {
+        document.getElementById("tien").innerHTML = (a-200)*200+150*400+50*600+25000;
+    }else if (a>50) {
+        document.getElementById("tien").innerHTML = (a-50)*400+50*600+25000;
+    }else {
+        document.getElementById("tien").innerHTML = a*600+25000;
+    }
+</script>
+</body>
+</html>

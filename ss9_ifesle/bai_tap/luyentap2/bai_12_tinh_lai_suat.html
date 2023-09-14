@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a= +prompt("Tiền gốc")
+    let b= +prompt("Lãi suất")
+    let c= +prompt("Số tháng")
+    let lst=b/(100*12)
+    let d= a*(Math.pow(1+lst,c));
+    alert('Sau '+c+' tháng. Bạn nhận được cả gốc cả lãi là '+d+' VNĐ')
+
+</script>
+</body>
+</html>

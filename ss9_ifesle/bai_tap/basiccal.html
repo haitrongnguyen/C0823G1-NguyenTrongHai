@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Calculator</title>
+    <style>
+        button{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<table border="1" cellpadding="10" cellspacing="10">
+    <tr>
+        <td colspan="4" style="height: 50px; text-align: right">
+            <span id="result"></span>
+        </td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="cal('1')">1</button></td>
+        <td><button type="button" onclick="cal('2')">2</button></td>
+        <td><button type="button" onclick="cal('3')">3</button></td>
+        <td><button type="button" onclick="cal('+')">+</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="cal('4')">4</button></td>
+        <td><button type="button" onclick="cal('5')">5</button></td>
+        <td><button type="button" onclick="cal('6')">6</button></td>
+        <td><button type="button" onclick="cal('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="cal('7')">7</button></td>
+        <td><button type="button" onclick="cal('8')">8</button></td>
+        <td><button type="button" onclick="cal('9')">9</button></td>
+        <td><button type="button" onclick="cal('*')">X</button></td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="cal('C')">C</button></td>
+        <td><button type="button" onclick="cal('0')">0</button></td>
+        <td><button type="button" onclick="cal('=')">=</button></td>
+        <td><button type="button" onclick="cal('/')">/</button></td>
+    </tr>
+</table>
+<script>
+    function cal(x) {
+        let result = document.getElementById("result").innerText;
+        switch (x) {
+            case '1':
+            case '2':
+            case '3':
+            case '4':
+            case '5':
+            case '6':
+            case '7':
+            case '8':
+            case '9':
+            case '+':
+            case '-':
+            case '*':
+            case '/':
+            case '0':
+                result = result+x;
+                break;
+                console.log("result");
+            case '=':
+                result=eval(result);
+                break;
+            case 'C':
+                result='';
+                break;
+        }
+        document.getElementById("result").innerText = result;
+    }
+
+</script>
+</body>
+</html>

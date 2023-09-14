@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="kt" type="number">
+<input id="gk" type="number">
+<input id="ck" type="number">
+<button onclick="check()">check</button>
+<p id="kq">Đây là kết quả</p>
+<script>
+    function check() {
+         a = +document.getElementById("kt").value;
+         b = +document.getElementById("gk").value;
+         c = +document.getElementById("ck").value;
+         d = (a+b*2+c*3)/6;console.log(d);
+        if (d>=8) {
+            document.getElementById("kq").innerText = "Giỏi";
+        }else if (d>6.5) {
+            document.getElementById("kq").innerText = "Khá";
+        }else if (d>5) {
+            document.getElementById("kq").innerText = "Trung bình";
+        }else {
+            document.getElementById("kq").innerText = "Yếu";
+        }
+    }
+</script>
+</body>
+</html>

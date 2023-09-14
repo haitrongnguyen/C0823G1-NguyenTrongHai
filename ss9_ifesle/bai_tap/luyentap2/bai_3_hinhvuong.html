@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình vuông</title>
+</head>
+<body>
+<h4>Nhập vào độ dài cạnh</h4>
+<input type="number" id="canh">
+<button onclick="tinh()" id="dt">Tính</button>
+<h4>Diện tích hình vuông là</h4>
+<h4 id="kq"></h4>
+<script>
+    function tinh() {
+        a=document.getElementById("canh").value;
+        document.getElementById("kq").innerText = a*a;
+    }
+</script>
+
+
+</body>
+</html>

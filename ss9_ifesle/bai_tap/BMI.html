@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+<h4>Tính chỉ số cân nặng</h4>
+<table>
+    <tr>
+        <td>
+            Nhập cân nặng:(kg)
+        </td>
+        <td>
+            <input type="number" id="weight">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Nhập chiều cao:(m)
+        </td>
+        <td>
+            <input type="number" id="high">
+        </td>
+    </tr>
+    <tr>
+       <td><button onclick="kt()">Kiểm tra</button></td>
+    </tr>
+</table>
+<p id="bmi"></p>
+<script>
+    function kt() {
+        a = +document.getElementById("weight").value;
+        b = +document.getElementById("high").value;
+        c = a/(Math.pow(b,2));
+        if (c<18) {
+            document.getElementById("bmi").innerHTML = ("Chỉ số BMI là: "+ c +". Bạn <b>Gầy</b>");
+        }else if (c<25) {
+            document.getElementById("bmi").innerHTML = ("Chỉ số BMI là: "+ c +". Bạn <b>Bình thường</b>");
+        }else if (c<30) {
+            document.getElementById("bmi").innerHTML = ("Chỉ số BMI là: "+ c +". Bạn <b>Thừa cân</b>");
+        }else {
+            document.getElementById("bmi").innerHTML = ("Chỉ số BMI là: "+ c +". Bạn <b>béo phì</b>");
+        }
+    }
+
+    /*let weight= prompt("Nhập vào cân nặng");
+    let high= prompt("Nhập vào chiều cao");
+    let BMI= weight/(high^2);
+    if (BMI<18) {
+        document.write("Underweight");
+    }else if (BMI<25) {
+        document.write("Normal");
+    }else if (BMI<30) {
+        document.write("Overweight");
+    }else {
+        document.write("Overweight");
+    }*/
+</script>
+</body>
+</html>
