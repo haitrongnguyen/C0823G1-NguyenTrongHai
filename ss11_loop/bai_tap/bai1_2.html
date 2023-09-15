@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i,j;
+    s="<table border='1' cellspacing='1' cellpadding='15' width= 1000px style='text-align: left'>"
+    for (i=1;i<=10;i++) {
+        s=s+"<tr>"
+        for (j=2;j<=9;j++) {
+            s=s+"<td>"+j+'x'+i+'='+ j*i +"</td>"
+        }s=s+"</tr>"
+    }s=s+"</table>"
+    document.write(s)
+</script>
+</body>
+</html>
