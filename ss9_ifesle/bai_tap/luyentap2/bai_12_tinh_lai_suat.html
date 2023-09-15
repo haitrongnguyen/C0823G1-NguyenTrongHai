@@ -10,9 +10,12 @@
     let b= +prompt("Lãi suất")
     let c= +prompt("Số tháng")
     let lst=b/(100*12)
-    let d= a*(Math.pow(1+lst,c));
-    alert('Sau '+c+' tháng. Bạn nhận được cả gốc cả lãi là '+d+' VNĐ')
-
+    if (c<0) {
+        alert('Mời nhập lại tháng')
+    }else {
+        d= a*(Math.pow(1+lst,c));
+        alert('Sau '+c+' tháng. Bạn nhận được cả gốc cả lãi là '+d+' VNĐ')
+    }
 </script>
 </body>
 </html>
