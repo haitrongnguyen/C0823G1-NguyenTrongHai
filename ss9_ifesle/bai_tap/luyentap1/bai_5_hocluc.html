@@ -12,17 +12,18 @@
 <p id="kq">Đây là kết quả</p>
 <script>
     function check() {
-         a = +document.getElementById("kt").value;
-         b = +document.getElementById("gk").value;
-         c = +document.getElementById("ck").value;
-         d = (a+b*2+c*3)/6;console.log(d);
-        if (d>=8) {
+        a = +document.getElementById("kt").value;
+        b = +document.getElementById("gk").value;
+        c = +document.getElementById("ck").value;
+        d = (a + b * 2 + c * 3) / 6;
+        console.log(d);
+        if (d >= 8) {
             document.getElementById("kq").innerText = "Giỏi";
-        }else if (d>6.5) {
+        } else if (d > 6.5) {
             document.getElementById("kq").innerText = "Khá";
-        }else if (d>5) {
+        } else if (d > 5) {
             document.getElementById("kq").innerText = "Trung bình";
-        }else {
+        } else {
             document.getElementById("kq").innerText = "Yếu";
         }
     }
