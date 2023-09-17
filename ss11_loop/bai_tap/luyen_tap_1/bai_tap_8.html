@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="but" onclick="start()">Bắt đầu</button>
+<script>
+    function start() {
+        dem = 1;
+        max = prompt('Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu')
+        random = Math.floor(Math.random() * max);
+        while (dem < 4) {
+            number = +prompt('Nhập số bạn đoán');
+            if (number === random) {
+                document.write('Bạn đã đoán đúng')
+                break;
+            } else if (number < random) {
+                alert('Số bạn đoán nhỏ hơn')
+                dem += 1
+            } else {
+                alert('Số bạn đoán lớn hơn')
+                dem += 1;
+            }
+        }
+        document.getElementById('but').innerText = 'Game over. Again'
+    }
+</script>
+</body>
+</html>
