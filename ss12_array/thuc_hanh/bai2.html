@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x=[1,2,3,4,5];console.log(x)
+    let y= Array();
+    for (i=0;i<x.length;i++) {
+        for (j=(x.length-1);j>=i;j--)
+        y[j]= x[x.length-1-i]
+    }document.write(y);console.log(y)
+</script>
+</body>
+</html>
