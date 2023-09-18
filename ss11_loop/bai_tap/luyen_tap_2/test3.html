@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="money">Số tiền ban đầu</label>
+<input placeholder="Số tiền ban đầu" id="money">
+<label for="ls">Lãi suất</label>
+<input placeholder="Lãi suất" id="ls">
+<label for="month">Số tháng</label>
+<input placeholder="Số tháng cho vay" id="month">
+<button type="button" onclick="check()">Kiểm tra</button>
+<br>
+<p id="result">Số tiền phải trả:</p>
+
+<script>
+    function check() {
+        a = +document.getElementById('money').value;
+        b = +document.getElementById('ls').value;
+        c = +document.getElementById('month').value;
+        tong = 0;
+        for (i = 1; i <= c; i++) {
+            lst1 = a * b / 12 / 100;
+            tong = a + lst1;
+            a = tong;
+
+        }document.write(a)
+
+    }
+
+
+</script>
+</body>
+</html>
