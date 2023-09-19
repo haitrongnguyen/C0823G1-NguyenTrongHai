@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhiệt độ</title>
+</head>
+<body>
+<script>
+    let a;
+    do {
+        a=+prompt('Nhập nhiệt độ');
+        if (a>100) {
+            alert('Nhiệt độ cao. Nhập lại');
+        }else if (a<20) {
+            alert('Nhiệt độ thấp. Nhập lại');
+        }else {
+            document.write('Nhiệt độ là : '+a);
+        }
+    }while (a>100 || a<20);
+</script>
+</body>
+</html>

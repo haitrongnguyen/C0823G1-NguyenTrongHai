@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số nguyên tố</title>
+</head>
+<body>
+<script>
+    let num = +prompt('Nhập n số nguyên tố cần in ra');
+    count = 0;
+    uoc = 0;
+    let i = 2
+    while (count < num) {
+        for (j = 1; j <= i; j++) {
+            if (i % j == 0) {
+                uoc++;
+            }
+        }
+        if (uoc == 2) {
+            document.write(i + '</br>');
+            count++;
+        }
+        uoc = 0;
+        i++;
+    }
+</script>
+</body>
+</html>
