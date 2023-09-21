@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="inp">
+<button onclick="hd()">Hoán đổi</button>
+<p id="result"></p>
+<script>
+    //dãy số bất kì được nhập vào
+    function hd() {
+        let num = document.getElementById('inp').value;
+        let arrnum = num.split('');
+        console.log(arrnum);
+        let arr = [];
+        for (i = (arrnum.length - 1); i >= 0; i--) {
+            arr.push(arrnum[i])
+        }
+        console.log(arr)
+        document.getElementById('result').innerHTML = arr.join('')
+    }
+    //dãy số được tạo sẵn
+    /*let arr=[2,3,7,9,12];
+    let bd=0;
+    let cc=arr.length-1;
+    while (bd<cc) {
+        let b=arr[bd];
+        arr[bd]=arr[cc]
+        arr[cc]=b;
+        bd++;
+        cc--;
+    }document.write(arr);*/
+</script>
+</body>
+</html>

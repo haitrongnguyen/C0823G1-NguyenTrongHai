@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [3, 62, 4, 78, 9, 10, 250, 45, 63, 45]
+    let max = arr[0];
+    let maxi;
+    for (i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+            maxi = i
+        }
+    }
+    document.write(max + ' là số lớn nhất và ở vị trí thứ ' + (maxi + 1));
+</script>
+</body>
+</html>

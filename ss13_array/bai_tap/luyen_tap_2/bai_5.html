@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt('Nhập vào dãy a(cách nhau bơi dấu cách): ');
+    let ar = a.split(' ');
+    let b = prompt('Nhập vào dãy b(cách nhau bơi dấu cách): ');
+    let br = b.split(' ');
+    let dem = 0;
+    if (ar.length == br.length) {
+        for (i = 0; i < ar.length; i++) {
+            if (ar[i] == br[i]) {
+                dem++;
+                console.log(dem)
+            }
+        }
+        if (dem == ar.length) {
+            alert('Hai dãy giống nhau')
+        } else {
+            alert('Hai dãy không giống nhau')
+        }
+    } else {
+        alert('Hai dãy không giống nhau')
+    }
+</script>
+
+</body>
+</html>

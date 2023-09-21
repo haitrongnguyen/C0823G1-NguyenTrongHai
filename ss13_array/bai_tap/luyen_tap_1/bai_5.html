@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*let st = prompt('Nhập vào 1 chuỗi');
+    console.log(st);
+    let dem = 0;
+    for (i = 0; i < st.length; i++) {
+        if (st[i] == 'u' || st[i] == 'e' || st[i] == 'o' || st[i] == 'a' || st[i] == 'i') {
+            dem += 1;
+        }
+    }
+    alert('Có '+ dem+ ' nguyên âm')*/
+
+    let st = prompt('Nhập vào 1 chuỗi');
+    console.log(st);
+    let dem = 0;
+    for (i = 0; i < st.length; i++) {
+        switch (st[i]) {
+            case 'u':
+            case 'e':
+            case 'o':
+            case 'a':
+            case 'i':
+                dem++;
+                break;
+        }
+    }
+    alert('Có ' + dem + ' nguyên âm')
+</script>
+</body>
+</html>

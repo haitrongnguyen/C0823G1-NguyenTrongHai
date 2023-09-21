@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    let max = arr[0];
+    let tong = arr[0];
+    for (i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+        tong += arr[i]
+    }
+    document.write(max + ' là số lớn nhất.' + '<br>' + 'Trung bình cộng là: ' + tong / arr.length);
+</script>
+</body>
+</html>

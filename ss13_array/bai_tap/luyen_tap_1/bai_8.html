@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Dùng sắp xếp nổi bọt
+    /*let str = prompt('Nhập vào dãy số');
+    console.log(str);
+    let a = str.split('');
+    let temp;
+    for (i = 0; i < a.length; i++) {
+        for (j = 0; j < a.length - 1 - i; j++) {
+            if (a[j] < a[j + 1]) {
+                temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp
+            }
+        }
+    }
+    console.log(a)*/
+    //Mảng cho trước
+    /*let arr=[5,12,36,45,78,12,45,68,45,79];
+    arr.sort(function (a,b){
+        return b-a;
+    })
+    console.log(arr)*/
+    /*let str = prompt('Nhập vào dãy số');
+    let a = str.split('');
+    a = a.sort(function (a, b) {
+        return b - a;
+    })
+    document.write(a);*/
+    //Nhập vào mảng
+    let num = prompt('Số lượng dãy số ');
+    let arr = new Array(num);
+    for (i = 0; i < num; i++) {
+        arr[i] = prompt('Số thứ ' + (i + 1))
+    }
+    console.log(arr)
+    document.write('Dãy sắp xếp giảm: ' + arr.sort(function (a, b) {
+        return b - a
+    }))
+</script>
+
+</body>
+</html>

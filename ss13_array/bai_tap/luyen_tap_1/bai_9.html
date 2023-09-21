@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //dùng concat
+    // Dãy cho trước và nối chuỗi
+    /*let a = [5, 12, 36, 45, 78, 12, 45, 68, 45, 79];
+    let b = [5, 16, 6, 47, 71, 14, 5, 8, 95, 79];
+    c = a.concat(b);
+    document.write(c)*/
+    //Nhập vào dãy và nối
+    /*let a = prompt('nhập vào 10 số nguyên');
+    let am = a.split('')
+    let b = prompt('Nhập vào dãy số nguyên tiếp theo');
+    let bm = b.split('')
+    c = am.concat(bm);
+    document.write(c.join(","))*/
+    //Nhập số từ bàn phím và nối
+    let a = prompt('Nhập dãy số thứ nhất cách nhau bởi dấu space')
+    let ar = a.split(' ')
+    let b = prompt('Nhập dãy số thứ 2 cách nhau bởi dấu space')
+    let br = b.split(' ')
+    let c;
+    c = ar.concat(br);
+    console.log(c)
+    document.write('Dãy sau khi nối: ' + c.join());
+</script>
+</body>
+</html>
