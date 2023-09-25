@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .button {
+            background-color: forestgreen;
+            color: white;
+            border: forestgreen;
+            width: 70px;
+        }
+
+        .product {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<h3>Add New Product</h3>
+<input id="newProduct">
+<button onclick="addProduct()" class="button">Add</button>
+<h4>Display Products</h4>
+<div id="table"></div>
+<script>
+    let arrProduct = ['Nokia 1', 'Nokia 2', 'Nokia 3',
+        'Nokia 4', 'Nokia 5', 'Nokia 6', 'Nokia 7', 'Nokia 8']
+    displayTable();
+
+    function displayTable() {
+        let table = '<table>'
+        for (i = 0; i < arrProduct.length; i++) {
+            table += '<tr>' +
+                '<td class="product">' + arrProduct[i] + '</td>' +
+                '<td>' + '<button class="button" onclick="updateName(' + i + ')">' + 'Edit' + '</button>' + '</td>' +
+                '<td>' + '<button class="button" onclick="deleteProduct(' + i + ')">' + 'Delete' + '</button>' + '</td>' + '</tr>'
+        }
+        table += '</table>'
+        document.getElementById('table').innerHTML = table;
+    }
+
+    function updateName(i) {
+        let newName = prompt('Nhập tên mới: ');
+        arrProduct[i] = newName;
+        displayTable();
+    }
+
+    function addProduct() {
+        let newProduct = document.getElementById('newProduct').value;
+        arrProduct.push(newProduct);
+        displayTable()
+    }
+
+    function deleteProduct(i) {
+        arrProduct.splice(i, 1);
+        displayTable()
+    }
+</script>
+</body>
+</html>

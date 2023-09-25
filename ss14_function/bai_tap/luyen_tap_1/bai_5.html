@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrSao = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+    let arrChomSao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+    let input = prompt('Nhập vào tên ngôi sao ')
+    //check(input);
+    document.write(check(input));
+
+    function check(a) {
+        let kt = -1;
+        result = '';
+        for (i = 0; i < arrSao.length; i++) {
+            if (a == arrSao[i]) {
+                kt = 0
+                //document.write(arr2[i])
+                result += 'Ngôi sao ' + arrSao[i] + ' thuộc chòm sao ' + arrChomSao[i];
+                return result;
+            }
+        }
+        if (kt === -1) {
+            //document.write('Không tìm thấy sao')
+            result += 'Không tìm thấy chòm sao.';
+            return result;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num1 = +prompt('Nhập số thứ nhất');
+    let num2 = +prompt('Nhập số thứ hai');
+    checkAndSum(num1, num2);
+
+    function checkAndSum(a, b) {
+        if (a > b) {
+            alert('Nhập lại ');
+        } else {
+            alert(a + b);
+        }
+    }
+</script>
+</body>
+</html>

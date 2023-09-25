@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt('Nhập dãy số nguyên cách nhau bởi dấu space: ')
+    let arr = str.split(' ');
+    document.write('Dãy trước khi đổi: ' + arr + '<br>')
+    document.write('Dãy sau khi đảo ngược: ' + daoNguoc(arr))
+
+
+    function daoNguoc(array) {
+        for (i = 0; i < array.length / 2; i++) {
+            temp = array[i];
+            array[i] = array[array.length - 1 - i]
+            array[array.length - 1 - i] = temp;
+        }
+        return array;
+    }
+
+</script>
+</body>
+</html>

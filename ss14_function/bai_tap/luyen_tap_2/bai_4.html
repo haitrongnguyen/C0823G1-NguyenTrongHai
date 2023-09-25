@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = prompt('Nhập vào 1 kí tự')
+    document.write(checkNumber(num))
+
+    function checkNumber(a) {
+        if (isNaN(a)) {
+            //alert('Đây không phải sô')
+            return false;
+        } else {
+            //alert('Đây là số')
+            return true;
+        }
+    }
+</script>
+</body>
+</html>

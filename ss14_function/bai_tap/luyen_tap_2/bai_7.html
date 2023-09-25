@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    result = ''
+
+    function doi(a, b) {
+        temp = a;
+        a = b;
+        b = temp;
+        result = 'Số thứ nhất là: ' + a + '</br>' + 'Số thứ nhất là ' + b
+        return result;
+    }
+
+    let x = +prompt('Nhập số thứ nhất: ')
+    document.write('Số thứ nhất là: ' + x + '<br>')
+    let y = +prompt('Nhập số thứ hai: ')
+    document.write('Số thứ nhất là: ' + y + '</br>')
+    document.write('Sau khi đổi' + '</br>' + doi(x, y))
+</script>
+</body>
+</html>
