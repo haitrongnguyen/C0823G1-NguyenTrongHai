@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="hinhchunhat"></canvas>
+<p id="chuvi"></p>
+<p id="dientich"></p>
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        getWidth() {
+            return this.width
+        }
+
+        getHeight() {
+            return this.height
+        }
+
+        calPeri(height, width) {
+            return (this.height + this.width) * 2;
+        }
+
+        calAcreage(height, width) {
+            return this.height * this.width;
+        }
+
+        setWidth(width) {
+            this.width = width
+        }
+
+        setHeight(height) {
+            this.height = height;
+        }
+
+        creatCavas(height, width) {
+            var canvas = document.getElementById('hinhchunhat');
+            var ctx = canvas.getContext('2d')
+            ctx.fillStyle = '#fa4b2a';
+            ctx.fillRect(0, 0, this.width, this.height)
+        }
+    }
+
+    let rectangle = new Rectangle(200, 100);
+    let width = rectangle.getWidth();
+    let height = rectangle.getHeight();
+    console.log(rectangle.calPeri());
+    rectangle.creatCavas()
+    document.getElementById('chuvi').innerHTML = 'Chu vi: ' + rectangle.calPeri()
+    document.getElementById('dientich').innerHTML = 'Diện tích: ' + rectangle.calAcreage()
+    rectangle.setHeight(200);
+    rectangle.setWidth(300);
+    rectangle.creatCavas()
+    document.getElementById('chuvi').innerHTML = 'Chu vi: ' + rectangle.calPeri()
+    document.getElementById('dientich').innerHTML = 'Diện tích: ' + rectangle.calAcreage()
+</script>
+</body>
+</html>

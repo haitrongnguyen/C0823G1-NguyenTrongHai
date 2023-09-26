@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="doF"></div>
+<div id="doK"></div>
+<script>
+    class Temperature {
+        constructor(doC) {
+            this.doC = doC;
+        }
+
+        getDoC() {
+            return this.doC;
+        }
+
+        setDoC(doC) {
+            this.doC = doC;
+        }
+
+        changeF() {
+            return this.doC * 1.8 + 32;
+        }
+
+        changeK() {
+            return this.doC + 273.15;
+        }
+    }
+
+    let temperature = new Temperature(25);
+    let doF = temperature.changeF();
+    let doK = temperature.changeK();
+    document.getElementById('doF').innerHTML = temperature.getDoC() + ' độ C = ' + doF + ' độ F';
+    document.getElementById('doK').innerHTML = temperature.getDoC() + ' độ C = ' + doK + ' độ K';
+    temperature.setDoC(50);
+</script>
+</body>
+</html>

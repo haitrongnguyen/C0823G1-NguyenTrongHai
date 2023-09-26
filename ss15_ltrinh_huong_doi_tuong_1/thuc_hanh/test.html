@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class DienThoai {
+        constructor() {
+            this.pin = 100;
+            this.banNhap = '';
+            this.hopThu = [];
+            this.hopThuDaGui = [];
+            this.batNguon = false;
+        }
+
+        kiemTraNguon() {
+            return this.batNguon
+        }
+
+        batNguonDt() {
+            this.batNguon = !this.batNguon;
+        }
+
+        sacPin() {
+            if (this.pin < 100) {
+                this.pin += 1
+            }
+        }
+
+        soanTinNhan(message) {
+            if (this.batNguon) {
+                this.banNhap = message;
+                this.pin -= 1;
+            }
+        }
+
+        nhanTinNhan(message) {
+            if (this.batNguon) {
+                this.hopThu.push(message);
+                this.pin -= 1;
+            }
+        }
+
+        guiTinNhan(message, mobile) {
+            if (this.batNguon && mobile.batNguon) {
+                this.pin -= 1;
+                mobile.hopThu.push(message);
+                this.hopThuDaGui.push(message);
+            }
+        }
+
+        xemHopThu() {
+            if (this.batNguon) {
+                this.pin -= 1;
+                return this.hopThu;
+            }
+        }
+
+        xemHopThuDaGui() {
+            if (this.batNguon) {
+                this.pin -= 1;
+                return this.hopThuDaGui;
+            }
+        }
+    }
+
+    let iphone = new DienThoai();
+    let nokia = new DienThoai();
+    iphone.batNguonDt();
+    nokia.batNguonDt();
+    iphone.soanTinNhan('hello Nokia');
+    iphone.guiTinNhan('hello Nokia', nokia);
+    iphone.hopThuDaGui;
+    nokia.hopThu;
+    console.log(iphone.xemHopThuDaGui());
+    console.log(nokia.xemHopThu())
+    console.log(iphone.pin);
+    console.log(nokia.pin)
+    iphone.sacPin();
+    console.log(iphone.pin)
+</script>
+</body>
+</html>

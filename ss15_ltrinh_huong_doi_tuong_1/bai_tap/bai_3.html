@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        constructor() {
+            this.battery = 100;
+            this.draftMessage = '';
+            this.inbox = [];
+            this.sentMessages = [];
+            this.powerOn = false;
+        }
+
+        kiemTraDienThoai() {
+            return this.powerOn;
+        }
+
+        batNguon() {
+            this.powerOn = !this.powerOn;
+        }
+
+        sacPin() {
+            if (this.battery < 100) {
+                this.battery += 1
+            }
+        }
+
+        soanTinNhan(message) {
+            if (this.powerOn) {
+                this.draftMessage += message
+                this.battery -= 1
+            }
+        }
+
+        nhanTinNhan(message) {
+            if (this.powerOn) {
+                this.inbox.push(message)
+                this.battery -= 1
+            }
+        }
+
+        guiTinNhan(message, mobile) {
+            if (this.powerOn && mobile.powerOn) {
+                mobile.nhanTinNhan(message)
+                this.sentMessages.push(message)
+                this.battery -= 1
+            }
+        }
+
+        xemTinNhan() {
+            if (this.powerOn) {
+                this.battery -= 1
+                return this.inbox;
+            }
+        }
+
+        xemTinNhanDaGui() {
+            if (this.powerOn) {
+                this.battery -= 1
+                return this.sentMessages;
+            }
+        }
+    }
+
+    iphone = new Mobile();
+    nokia = new Mobile();
+    iphone.batNguon();
+    nokia.batNguon();
+    iphone.soanTinNhan('hello');
+    iphone.guiTinNhan('helo', nokia);
+    console.log(nokia.inbox)
+    console.log(iphone.xemTinNhanDaGui())
+    console.log(iphone.battery)
+    console.log(nokia.battery)
+</script>
+</body>
+</html>
