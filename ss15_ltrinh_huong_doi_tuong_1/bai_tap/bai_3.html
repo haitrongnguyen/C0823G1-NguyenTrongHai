@@ -25,13 +25,13 @@
 
         sacPin() {
             if (this.battery < 100) {
-                this.battery += 1
+                return this.battery += 1
             }
         }
 
         soanTinNhan(message) {
             if (this.powerOn) {
-                this.draftMessage += message
+                this.draftMessage = message
                 this.battery -= 1
             }
         }
@@ -71,11 +71,14 @@
     iphone.batNguon();
     nokia.batNguon();
     iphone.soanTinNhan('hello');
+    console.log(iphone.draftMessage)
     iphone.guiTinNhan('hello Nokia', nokia);
     console.log(nokia.xemTinNhan())
     console.log(iphone.xemTinNhanDaGui())
     console.log(iphone.battery)
     console.log(nokia.battery)
+    console.log(iphone.sacPin());
+    console.log(nokia.sacPin());
 </script>
 </body>
 </html>
