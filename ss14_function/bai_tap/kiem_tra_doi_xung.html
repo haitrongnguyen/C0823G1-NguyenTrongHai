@@ -6,7 +6,23 @@
 </head>
 <body>
 <script>
-    
+    let word = prompt('Nhập vào từ muốn kiểm tra ');
+    let arr = word.split('');
+    document.write(checkPalindrome(arr));
+
+    function checkPalindrome(array) {
+        let check = 0;
+        for (i = 0; i < (array.length - 1) / 2; i++) {
+            if (array[i] === array[array.length - 1 - i]) {
+                check += 1;
+            }
+        }
+        if (check == Math.floor(array.length / 2)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 </script>
 </body>
 </html>

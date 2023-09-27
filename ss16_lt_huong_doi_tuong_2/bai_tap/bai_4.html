@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .o{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<div id="banco"></div>
+<script>
+    let table= '<table border="1" >'
+    for (i=1;i<11;i++) {
+        table+='<tr>'
+        for (j=1;j<11;j++) {
+            table+='<td class="o" onclick="+()+" id="">'+j+'</td>'
+        }table+='</tr>'
+    }table+='</table>'
+    document.getElementById('banco').innerHTML = table
+</script>
+</body>
+</html>

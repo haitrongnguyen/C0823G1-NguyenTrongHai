@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+let ten= prompt("Bạn là ai?")
+if (ten=="Admin") {
+    let mk=prompt("Nhập mật khẩu");
+    if (mk=="matkhau") {
+        alert("Xin chào");
+    }else {
+        if (mk==null) {
+            alert("Hủy")
+        }else {
+            alert("Mật khẩu không đúng");
+        }
+    }
+}else if (ten==null) {
+    alert("Hủy")
+}else {
+    alert("Tên đăng nhập sai")
+}
+</script>
+
 </body>
 </html>

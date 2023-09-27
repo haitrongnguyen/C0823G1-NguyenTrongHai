@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<p>
+    <label>Fahrenheit</label>
+    <input id="input" type="number" placeholder="Fahrenheit"
+           oninput="chuyen(this.value)" onchange="chuyen(this.value)">
+</p>
+<p>Celsius: <span id="output"></span></p>
+<script>
+    function chuyen(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("output").innerText = (valNum - 32) / 1.8;
+    }
+</script>
 </body>
 </html>

@@ -10,24 +10,26 @@
     let canduoi;
     let cantren;
     let num;
-    count=1;
+    count = 1;
+
     function play() {
-        canduoi=+prompt("nhâp cận dưới");
-        cantren=+prompt('Nhập cận trên');
-        random=Math.round(Math.random()*(cantren-canduoi)+canduoi);console.log(random);
+        canduoi = +prompt("nhâp cận dưới");
+        cantren = +prompt('Nhập cận trên');
+        random = Math.round(Math.random() * (cantren - canduoi) + canduoi);
+        console.log(random);
         do {
-            num=+prompt('Nhập số bạn đoán');
-            if (num<random) {
+            num = +prompt('Nhập số bạn đoán');
+            if (num < random) {
                 alert('Số bạn chọn nhỏ hơn');
                 count++;
-            } else if (num>random) {
+            } else if (num > random) {
                 alert('Số bạn chọn lớn hơn');
                 count++;
-            }else {
+            } else {
                 document.write('Chúc mừng bạn đã đoán đúng')
                 break;
             }
-        }while (count<4);
+        } while (count < 4);
 
 
     }

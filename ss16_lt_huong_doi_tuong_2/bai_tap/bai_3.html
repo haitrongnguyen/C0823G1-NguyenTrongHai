@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class BongDen {
+        constructor() {
+            this.trangThai = 'tắt';
+        }
+
+        getTrangThai() {
+            return this.trangThai;
+        }
+        setTrangThai(newtrangthai){
+            this.trangThai = newtrangthai
+        }
+    }
+
+    class CongTac {
+        constructor(bongden) {
+            this.trangThaiCt = false;
+            this.bongDen = bongden;
+        }
+
+        getTrangThai() {
+            return this.trangThaiCt;
+        }
+        setTrangThai(newTrangThaiCt) {
+            this.trangThaiCt = newTrangThaiCt;
+        }
+        ketNoi(BongDen) {
+            this.bongDen = BongDen;
+        }
+
+        batCongTac() {
+            bongden.trangThai = 'bật';
+        }
+
+        tatCongTac() {
+            bongden.trangThai = 'tắt'
+        }
+    }
+
+    bongden = new BongDen();
+    congtac = new CongTac(bongden);
+    console.log(congtac.trangThaiCt);
+    console.log(bongden.getTrangThai())
+    congtac.batCongTac()
+    console.log(bongden.getTrangThai())
+    congtac.tatCongTac();
+    console.log(bongden.getTrangThai())
+    congtac.batCongTac()
+    console.log(bongden.getTrangThai())
+    congtac.tatCongTac();
+    console.log(bongden.getTrangThai())
+    congtac.batCongTac()
+    console.log(bongden.getTrangThai())
+    congtac.tatCongTac();
+    console.log(bongden.getTrangThai())
+    congtac.batCongTac()
+    console.log(bongden.getTrangThai())
+    congtac.tatCongTac();
+    console.log(bongden.getTrangThai())
+    congtac.batCongTac()
+    console.log(bongden.getTrangThai())
+    congtac.tatCongTac();
+    console.log(bongden.getTrangThai())
+    congtac.batCongTac()
+    console.log(bongden.getTrangThai())
+    congtac.tatCongTac();
+    console.log(bongden.getTrangThai())
+</script>
+</body>
+</html>

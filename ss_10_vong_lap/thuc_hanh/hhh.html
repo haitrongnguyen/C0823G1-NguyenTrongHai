@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Document</title>
 </head>
+
 <body>
-$END$
+<script>
+    let a = 0;
+    let b = 1;
+    let fibo = 0 + '<br>' + 1;
+    for (i = 2; i <= 19; i++) {
+        c = a + b;
+        fibo = fibo + '<br>' + c;
+        a = b;
+        b = c;
+    }
+    document.write(fibo);
+</script>
 </body>
+
 </html>

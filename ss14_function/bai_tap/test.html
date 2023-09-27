@@ -6,15 +6,16 @@
 </head>
 <body>
 <script>
-    s='<table>'
-    for (i=0;i<10;i++) {
-        s=s+'<tr>'
-        for (j=1;j<4;j++) {
-            s=s+'<td id="i">'+i+'</td>'+'<td><button>edit</button></td><td><button>delete</button></td>'
-        }s+='</tr>'
-
-    }s+='</table>'
-    document.write(s)
+    function tinhGiaithua(n) {
+        if (n==0) {
+            return 1;
+        }else {
+            return n*tinhGiaithua(n-1);
+        }
+    }
+    let a=prompt('nhập a');
+    result=tinhGiaithua(a);
+    document.write(result)
 </script>
 </body>
 </html>

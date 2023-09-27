@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor() {
+            this.KhoiLuong = 10;
+        }
+
+        getKhoiLuong() {
+            return this.KhoiLuong
+        }
+
+        isEmpty() {
+            if (this.KhoiLuong <= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    class Human {
+        constructor(ten, gioiTinh, canNang) {
+            this.ten = ten;
+            this.gioiTinh = gioiTinh;
+            this.canNang = canNang;
+        }
+
+        getCanNang() {
+            return this.canNang;
+        }
+
+        say(message) {
+            document.write(message)
+        }
+
+        eatApple(apple) {
+            if (apple.getKhoiLuong() > 0) {
+                apple.KhoiLuong -= 1;
+                this.canNang += 1;
+            } else {
+                document.write('Táo đã hết')
+            }
+        }
+    }
+
+    let Adam = new Human('Adam', 'Male', 65)
+    console.log(Adam)
+    let Eva = new Human('Eva', 'FeMale', 50)
+    console.log(Eva)
+    let apple = new Apple();
+    Adam.say("Anh muốn ăn táo" + "<br>");
+    Eva.say("Ok, chúng ta còn một quả duy nhất" + "<br>");
+    while (!apple.isEmpty()) {
+        document.write('Adam ăn táo' + '</br>');
+        Adam.eatApple(apple);
+        document.write('Quả táo còn: ' + '</br>');
+        document.write(apple.getKhoiLuong() + ' đơn vị' + '</br>')
+        document.write('Cân nặng của Adam: ' + Adam.getCanNang())
+        document.write('</br>')
+        document.write('Eva ăn táo' + '</br>');
+        Eva.eatApple(apple);
+        document.write('Quả táo còn: ' + '</br>');
+        document.write(apple.getKhoiLuong() + ' đơn vị' + '<br>')
+        document.write('Cân nặng của Eva: ' + Eva.getCanNang() + '<br>')
+
+
+    }
+</script>
+</body>
+</html>

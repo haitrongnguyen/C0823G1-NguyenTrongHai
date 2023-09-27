@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<input id="inp">
+<button id="add" onclick="add()">Add</button>
+<button onclick="display()">Display</button>
+<p id="result"></p>
+<script>
+    let x=0;
+    let array= Array();
+    function add() {
+        array[x]=document.getElementById('inp').value;
+        alert('Element: '+array[x]+' Added at index '+x);
+        x++;
+        document.getElementById('inp').value='';
+    }
+    function display() {
+        let e='<hr>';
+        for (i=0;i< array.length;i++) {
+            e+= 'Element ' + i+'='+array[i]+'<br>'
+        }document.getElementById('result').innerHTML = e;
+
+    }
+</script>
 </body>
 </html>
