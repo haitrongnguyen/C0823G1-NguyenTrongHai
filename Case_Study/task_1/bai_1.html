@@ -8,14 +8,14 @@
 <script>
     let luong = +prompt('Nhập lương:');
     if (luong >= 15000000) {
-        thue = luong * 20/100;
+        thue = luong * 20 / 100;
     } else if (luong >= 7000000) {
-        thue = luong * 10/100;
+        thue = luong * 10 / 100;
     } else if (luong > 0) {
-        thue = luong * 5/100;
+        thue = luong * 5 / 100;
     }
     let luongNV = luong - thue;
-    document.write('Thuế thu nhập: '+thue+'</br>'+'Lương thực nhận: ' + luongNV + ' VNĐ')
+    document.write('Thuế thu nhập: ' + thue + '</br>' + 'Lương thực nhận: ' + luongNV + ' VNĐ')
 </script>
 </body>
 </html>
