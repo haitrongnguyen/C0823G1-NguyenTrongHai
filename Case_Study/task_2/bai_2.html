@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let chieucao = +prompt('Nhập chiều cao tam giác cân');
+    // for (i=1;i<=chieucao;i++) {
+    //     for (j=chieucao;j>-i+1;j--) {
+    //         if (j <= i) {
+    //             document.write('*')
+    //         }else {
+    //             document.write('&nbsp&nbsp')
+    //         }
+    //     }
+    //     document.write('</br>')
+    // }
+    // let chieucao = +prompt('Nhập chiều cao tam giác cân');
+    // for (i=1;i<=chieucao;i++) {
+    //     for (j=1;j<2*chieucao;j++) {
+    //         if (j>chieucao-i && j<chieucao+i) {
+    //             document.write('*')
+    //         }else {
+    //             document.write('&nbsp&nbsp')
+    //         }
+    //     }
+    //     document.write('</br>')
+    // let h = +prompt('Nhap chieu cao');
+    // for (let i=1;i<=h;i++) {
+    //     for (j = 1; j <= h - i; j++) {
+    //         document.write('&nbsp&nbsp')
+    //     }
+    //     for (n = 1; n <= 2 * i - 1; n++) {
+    //         document.write('*')
+    //     }
+    //     for (j = 1; j <= h - i; j++) {
+    //         document.write('&nbsp&nbsp')
+    //     }
+    //     document.write('</br>')
+    // }
+    let h = +prompt('Nhap chieu cao');
+    for (i = 1; i <= h; i++) {
+        for (k = h; k > i; k--) {
+            document.write('&nbsp;&nbsp')
+        }
+        for (j = 1; j <= 2 * i - 1; j++) {
+            document.write('*')
+        }
+        document.write('</br>')
+    }
+
+</script>
+</body>
+</html>

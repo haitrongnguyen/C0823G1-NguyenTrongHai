@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ol>
+    <li>Cafe</li>
+    <li>Cam vắt</li>
+    <li>Nước ép cà rốt</li>
+    <li>Nước ép cà chua</li>
+    <li>Nước lọc</li>
+    <li>Nước dừa</li>
+    <li>Ấn 7 để thoát</li>
+</ol>
+<div id="tongtien">Tổng tiền:</div>
+<script>
+    let result = 0;
+    let chonMon;
+    do {
+        chonMon = +prompt('Nhập số thứ tự ứng với món bạn chọn. Ấn 7 để hủy')
+        switch (chonMon) {
+            case 1:
+                soLuong = +prompt('Cafe có giá 12000VNĐ. Nhập số lượng');
+                result += soLuong * 12000;
+
+                break;
+            case 2:
+                soLuong = +prompt('Cam Vắt có giá 20000VNĐ. Nhập số lượng');
+                result += soLuong * 20000;
+
+                break;
+            case 3:
+                soLuong = +prompt('Nước ép cà rốt có giá 12000VNĐ. Nhập số lượng');
+                result += soLuong * 12000;
+
+                break;
+            case 4:
+                soLuong = +prompt('Nước ép cà chua có giá 12000VNĐ. Nhập số lượng') + ' VNĐ';
+                result += soLuong * 12000;
+                break;
+            case 5:
+                soLuong = +prompt('Nước lọc có giá 10000VNĐ. Nhập số lượng');
+                result += soLuong * 10000;
+
+                break;
+            case 6:
+                soLuong = +prompt('Nước dừa có giá 15000VNĐ. Nhập số lượng');
+                result += soLuong * 15000;
+
+                break;
+            case 7:
+                break;
+            default:
+                alert('Số không hợp lệ');
+        }
+    } while (chonMon !== 7)
+    document.getElementById('tongtien').innerText = 'Tổng tiền: ' + result + ' VNĐ';
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // let arrA = [7, 2, 5, 3, 5, 3];
+    // console.log(arrA)
+    // let arrB = [7, 2, 5, 6, 4, 4, 6, 8, 3, 5, 3];
+    // let arrC = [];
+    //
+    // for (let i = 0; i < arrB.length; i++) {
+    //     let check = 0;
+    //     for (let j = 0; j < arrA.length; j++) {
+    //         if (arrB[i] === arrA[j]) {
+    //             check = -1;
+    //             break;
+    //         }
+    //     }
+    //     if (check === 0) {
+    //         arrC.push(arrB[i])
+    //     }
+    // }
+    // console.log(arrC)
+    // let arrD = []
+    // for (i = 0; i < arrC.length; i++) {
+    //     if (!arrD.includes(arrC[i])) {
+    //         arrD.push(arrC[i]);
+    //     }
+    //
+    // }
+    // console.log(arrD.sort())
+    let arrA = [7, 2, 5, 3, 5, 3];
+    let arrB = [7, 2, 5, 6, 4, 4, 6, 8, 3, 5, 3];
+    let arrC = [];
+    for (i = 0; i < arrB.length; i++) {
+        if (!arrA.includes(arrB[i]) && !arrC.includes(arrB[i])) {
+            arrC.push(arrB[i])
+        }
+    }
+    console.log(arrC.sort())
+
+</script>
+</body>
+</html>
