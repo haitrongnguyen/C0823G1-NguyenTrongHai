@@ -7,11 +7,11 @@
 <body>
 <script>
     let h = +prompt('Nhập chiều cao tam giác')
-    for (i = 1; i <= h; i++) {
-        for (n = h; n > i; n--) {
+    for (let i = 1; i <= h; i++) {
+        for (let n = h; n > i; n--) {
             document.write('&nbsp;&nbsp')
         }
-        for (j = 1; j <= 2 * i - 1; j++) {
+        for (let j = 1; j <= 2 * i - 1; j++) {
             if (i === h || j === 2 * i - 1 || j === 1) {
                 document.write('*')
             } else {

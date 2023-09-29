@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick='addStudent()'>Thêm học viên</button>
+<button onclick="editStudent()">Sửa thông tin học viên</button>
+<button id="deleteStudent" onclick="deleteStu()">Xóa học viên</button>
+<div id="table"></div>
+<script>
+
+
+    class Student {
+        constructor(mahocvien, ten, lop, email, ngaysinh, module) {
+            this.maHocVien = mahocvien;
+            this.ten = ten;
+            this.lop = lop;
+            this.email = email;
+            this.ngaySinh = ngaysinh;
+            this.module = module;
+        }
+
+        getMaHocVien() {
+            return this.maHocVien;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        getLop() {
+            return this.lop;
+        }
+
+        getEmail() {
+            return this.email;
+        }
+
+        getNgaySinh() {
+            return this.ngaySinh;
+        }
+
+        getModule() {
+            return this.module;
+        }
+
+        setMaHocVien(newInfo) {
+            this.maHocVien = newInfo
+        }
+
+        setTen(newInfo) {
+            this.ten = newInfo;
+        }
+
+        setLop(newInfo) {
+            this.lop = newInfo
+        }
+
+        setEmail(newInfo) {
+            this.email = newInfo
+        }
+
+        setNgaySinh(newInfo) {
+            this.ngaySinh = newInfo
+        }
+
+        setModule(newInfo) {
+            this.module = newInfo
+        }
+    }
+
+    let nguyenvana = new Student('HV-0001', 'Nguyễn Văn A', 'C1022G1', 'nguyenvana@gmail.com', '01/01/2004', 'Module 1')
+    let nguyenvanb = new Student('HV-0002', 'Nguyễn Văn B', 'C1022G1', 'nguyenvanb@gmail.com', '02/01/2004', 'Module 1')
+    let nguyenvanc = new Student('HV-0003', 'Nguyễn Văn C', 'C1022G1', 'nguyenvanc@gmail.com', '03/01/2004', 'Module 1')
+    let students = [nguyenvana, nguyenvanb, nguyenvanc];
+    let table;
+    disPlayTable()
+
+    function disPlayTable() {
+        table = '<table border="1">\n' +
+            '  <tr>\n' +
+            '    <th>Mã học viên</th>\n' +
+            '    <th>Tên</th>\n' +
+            '    <th>Lớp</th>\n' +
+            '    <th>Email</th>\n' +
+            '    <th>Ngày sinh</th>\n' +
+            '<th>Module</th>'
+            ' </tr>'
+
+        for (let i = 0; i < students.length; i++) {
+            student = students[i]
+            table += `<tr>
+                      <td>${student.getMaHocVien()}</td>
+                      <td>${student.getTen()}</td>
+                      <td>${student.getLop()}</td>
+                      <td>${student.getEmail()}</td>
+                      <td>${student.getNgaySinh()}</td>
+                      <td>${student.getModule()}</td>
+                      </tr>`
+        }
+        table += `</table>`
+        document.getElementById('table').innerHTML = table
+    }
+
+    function deleteStu() {
+        let maHocVien = prompt('Nhập mã học viên')
+        for (let i = 0; i < students.length; i++) {
+            if (maHocVien === students[i].getMaHocVien()) {
+
+                if (confirm(`Bạn muốn xóa học viên ${students[i].getTen()}`)) {
+                    students.splice(i, 1);
+                    break;
+                }
+            } else {
+                alert('Mã học viên k hợp lệ');
+                break;
+            }
+        }
+        disPlayTable();
+    }
+
+    function addStudent() {
+        let newHv = new Student(prompt('Nhập mã Hv'), prompt('Nhập tên'), prompt('Nhập lớp'), prompt('Nhập email'),
+            prompt('Nhập ngày sinh'), prompt('Nhập module'));
+        students.push(newHv);
+        disPlayTable();
+    }
+
+    function editStudent() {
+        let maHv = prompt('Nhập mã học viên muốn sửa')
+        for (i = 0; i < students.length; i++) {
+            if (maHv === students[i].getMaHocVien()) {
+                students[i].setMaHocVien(prompt('Nhập mã học viên mới'))
+                students[i].setTen(prompt('Nhập tên học viên'))
+                students[i].setLop(prompt('Nhập lớp'))
+                students[i].setEmail(prompt('Nhập email'))
+                students[i].setNgaySinh(prompt('Nhập ngày sinh'))
+                students[i].setModule(prompt('Nhập module'));
+                break;
+            } else {
+                alert('Mã học viên không hợp lệ');
+                break;
+            }
+        }
+        disPlayTable();
+    }
+</script>
+</body>
+</html>

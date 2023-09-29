@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let cols = +prompt('Nhập số hàng');
+    let rows = +prompt('Nhập số cột');
+    let matrix = [];
+    for (let i = 0; i < rows; i++) {
+        matrix[i] = [];
+        for (let j = 0; j < cols; j++) {
+            matrix[i][j] = +prompt('nhập phần tử ' + j + ' hàng ' + i)
+        }
+    }
+    console.log(matrix)
+    let sum = 0;
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+            if (matrix[i][j] % 2 === 0) {
+                sum += matrix[i][j];
+            }
+        }
+    }
+    console.log(sum)
+</script>
+</body>
+</html>

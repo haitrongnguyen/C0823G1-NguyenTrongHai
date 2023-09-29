@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1 = prompt('nhập chuỗi 1')
+    let arr1 = str1.split('');
+    let str2 = prompt('Nhập chuỗi 2')
+    let arr2 = str2.split('')
+    let dem = 0;
+    arr3 = [];
+    for (i = 0; i < arr1.length; i++) {
+        for (j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                arr3.push(arr1[i])
+                break;
+            }
+        }
+    }
+    console.log(`Có ${arr3.length} phần tử giống nhau. Cụ thể là kí tự ${arr3.join(',')}`)
+</script>
+</body>
+</html>

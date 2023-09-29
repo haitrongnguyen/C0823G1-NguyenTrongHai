@@ -6,17 +6,17 @@
 </head>
 <body>
 <script>
-    numerators = [5, 2, 5, 6, 7, 8];
-    denominators = [6, 3, 4, 4, 4, 4];
+    arr1 = [5, 2, 5, 6, 7, 8];
+    arr2 = [6, 3, 4, 4, 4, 4];
     let max;
-    for (let i = 0; i < numerators.length; i++) {
-        max = numerators[i] / denominators[i]
-        if (max < (numerators[i + 1] / denominators[i + 1])) {
-            max = (numerators[i + 1] / denominators[i + 1])
+    for (let i = 0; i < arr1.length; i++) {
+        max = arr1[i] / arr2[i]
+        if (max < (arr1[i + 1] / arr2[i + 1])) {
+            max = (arr1[i + 1] / arr2[i + 1])
             index = i + 1;
         }
     }
-    console.log(index + ' là vị trí của ' + numerators[index] + '/' + denominators[index])
+    console.log(index + ' là vị trí của ' + arr1[index] + '/' + arr2[index]+' là phân số lớn nhất')
 </script>
 </body>
 </html>

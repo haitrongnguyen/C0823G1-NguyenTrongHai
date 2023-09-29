@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let rows = prompt('Nhập số hàng');
+    let cols = prompt('Nhập số cột');
+    let matrix = [];
+    let soNguyenTo = [];
+    for (let i = 0; i < rows; i++) {
+        matrix[i] = [];
+        for (let j = 0; j < cols; j++) {
+            matrix[i][j] = +prompt('Nhập phần tử thứ ' + j + ' hàng ' + i);
+        }
+    }
+    console.log(matrix)
+    checkSntMaxtrix(matrix)
+    console.log(soNguyenTo)
+
+    function checkSntMaxtrix(arr) {
+        for (let a = 0; a < rows; a++) {
+            for (let b = 0; b < cols; b++) {
+                isPrime(arr[a][b]);
+            }
+        }
+
+    }
+
+    function isPrime(a) {
+        let uoc = 0
+        for (k = 0; k <= a; k++) {
+            if (a % k === 0) {
+                uoc += 1;
+            }
+        }
+        if (uoc === 2) {
+            soNguyenTo.push(a)
+        }
+    }
+</script>
+</body>
+</html>
