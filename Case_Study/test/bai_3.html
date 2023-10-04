@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt('Nhập vào dãy cần kiểm tra cách nhau bởi dấu phẩy(",")');
+    arr = str.split(',');
+    console.log(arr)
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = Number(arr[i]);
+    }
+    console.log(arr)
+    console.log(checkFibonanci(arr))
+
+    function checkFibonanci(arr) {
+        let a = 0;
+        let b = 1;
+        fibo = [0, 1];
+        array = [];
+        for (let i = 0; i < 15; i++) {
+            c = a + b;
+            fibo.push(c)
+            a = b;
+            b = c
+        }
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < fibo.length; j++) {
+                if (arr[i] === fibo[j]) {
+                    array.push(Number(arr[i]));
+                    break;
+                }
+            }
+        }
+        return array.sort(function (a, b) {
+            return a - b
+        });
+    }
+</script>
+</body>
+</html>

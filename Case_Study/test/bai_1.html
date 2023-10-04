@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let length = +prompt('Nhập số lượng phần tử');
+    while (true) {
+        if (length > 50) {
+            alert(`Số lượng phải nhỏ hơn 50`)
+            length = +prompt('Nhập số lượng phần tử');
+        } else {
+            break;
+        }
+    }
+    let arr = new Array(length);
+    let tong = 0;
+    let soluongphantu = 0;
+    for (i = 0; i < length; i++) {
+        arr[i] = +prompt(`Nhập phần tủ thứ ${i}`)
+    }
+    console.log(arr)
+    for (i = 0; i < length; i++) {
+        if (i % 3 == 0 && arr[i] % 5 == 0) {
+            tong += arr[i];
+            soluongphantu++;
+        }
+    }
+    document.write(`Trung bình: ${tong / soluongphantu}`)
+</script>
+</body>
+</html>

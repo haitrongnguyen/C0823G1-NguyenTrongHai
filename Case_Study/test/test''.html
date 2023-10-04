@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    str = prompt('nhập chuỗi');
+    console.log(str, str.length)
+    let arr1 = [];
+    console.log(chuanHoa(str))
+
+    function chuanHoa(str) {
+        str = str.trim();
+        test = str.split(' ');
+        console.log(test.length)
+        if (test.length === 1) {
+            alert('Chuỗi chỉ có 1 từ nên không cần viết tắt')
+        } else {
+            arr = str.split('')
+            arr1.push(arr[0].toUpperCase())
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i] == ' ' && arr[i + 1] == ' ') {
+                    arr.splice(i, 1);
+                    i--
+                }
+                if (arr[i - 1] === ' ') {
+                    arr1.push(arr[i].toUpperCase())
+                }
+            }
+            //console.log(arr,arr1)
+            return arr1.join('');
+        }
+
+    }
+</script>
+</body>
+</html>

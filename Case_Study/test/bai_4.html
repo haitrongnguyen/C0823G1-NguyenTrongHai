@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="table">
+</div>
+<button onclick="add()">Thêm mới</button>
+
+<script>
+    class MayTinh{
+        constructor(maMay,tenMay,hangSanXuat,giaBan) {
+            this.maMay = maMay;
+            this.tenMay = tenMay;
+            this.hangSanXuat = hangSanXuat;
+            this.giaBan = giaBan;
+        }
+        getMaMay(){
+            return this.maMay;
+        }
+        getTenMay(){
+            return this.tenMay;
+        }
+        getHangSanXuat(){
+            return this.hangSanXuat;
+        }
+        getGiaBan(){
+            return this.giaBan;
+        }
+        setMaMay(maMay){
+            this.maMay = maMay;
+        }
+        setTenMay(tenMay){
+           this.tenMay = tenMay;
+        }
+        setHangSanXuat(hangSanXuat){
+            this.hangSanXuat = hangSanXuat;
+        }
+        setGiaBan(giaBan){
+           this.giaBan = giaBan;
+        }
+    }
+    let mayTinh=[];
+    let lenovo = new MayTinh('1','Lenovo','lv',1997);
+    let dell = new MayTinh('2','dell','dell',1998)
+    mayTinh.push(lenovo)
+    mayTinh.push(dell)
+    displayMayTinh();
+    function displayMayTinh(){
+        tableData = `<table border="1">
+    <tr>
+        <th>Mã máy</th>
+        <th>Tên máy</th>
+        <th>Hãng sản Xuất</th>
+        <th>Giá bán</th>
+    </tr>`
+        for (i=0;i<mayTinh.length;i++){
+            let maytinh = mayTinh[i];
+            tableData+=`<tr>
+        <td>${maytinh.getMaMay()}</td>
+        <td>${maytinh.getTenMay()}</td>
+        <td>${maytinh.getHangSanXuat()}</td>
+        <td>${maytinh.getGiaBan()}</td>
+    </tr>`
+        }
+        tableData+=`</table>`;
+        document.getElementById('table').innerHTML = tableData;
+    }
+    function add() {
+        
+    }
+
+</script>
+
+</body>
+</html>
